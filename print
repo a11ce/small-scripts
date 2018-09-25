@@ -1,2 +1,2 @@
 #!/bin/bash
-cat $1 | nc printer.address 9100
+cat $1 | gsed 's/$/\r/' | nc printer.address 9100
